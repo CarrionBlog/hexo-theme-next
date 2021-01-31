@@ -1,6 +1,6 @@
 {% import '_partials/header/menu-item.njk' as menu_item with context %}
 
-{%- if theme.menu and is_page() %}
+{%- if theme.menu and (is_page() or is_post()) %}
   {# Submenu & Submenu-2 #}
   {%- for name, value in theme.menu %}
     {%- set respath = value %}
